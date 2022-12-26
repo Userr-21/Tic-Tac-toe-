@@ -1,0 +1,14 @@
+button {
+    width: 90%;
+    height: 90%;
+    font-size: 60px;
+    background-color: #f7f7ff;
+    border: none;
+    border-radius: 5px;
+}
+.b1 {
+    color: #69d3e3;
+}
+.b2 {
+    color: #e95c5c;
+}

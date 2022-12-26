@@ -1,0 +1,19 @@
+<div class="container">
+    <h2 *ngIf="newgame">❌⭕TicTacToe⭕❌</h2>
+    <h1 *ngIf="!isdraw && !winner && !newgame">Current player: {{ player }}</h1>
+    <h2 *ngIf="winner">Player {{ winner }} WINNER!</h2> 
+    <button *ngIf="winner || isdraw" (click)="newGame()">Restart game</button>
+    <h2 *ngIf="isdraw">Draw!</h2>
+    <button 
+    *ngIf="newgame"
+    (click)="newGame()">Start game
+    </button>
+    <main class="color" *ngIf="!winner && !isdraw">
+        <app-board *ngFor="let val of squares;
+        let i = index"
+        [value] = "val"
+        (click) = "makeMove(i)"
+        class="color" >
+        </app-board>  
+    </main>
+</div>
